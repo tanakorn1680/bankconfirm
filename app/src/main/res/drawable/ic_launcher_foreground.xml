@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Payment icon: ฿ ขาวบน Mayor Service สีส้ม -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- กล่องส้ม Mayor Service style -->
+    <path
+        android:fillColor="#F05A28"
+        android:pathData="M22,36 Q22,28 30,28 L78,28 Q86,28 86,36 L86,72 Q86,80 78,80 L30,80 Q22,80 22,72 Z"/>
+
+    <!-- ฿ สีขาว -->
+    <!-- ขีดกลางบน -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,47 L70,47 Q76,47 76,52 Q76,57 70,57 L38,57 Z"/>
+    <!-- ขีดกลางล่าง -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,57 L70,57 Q76,57 76,62 Q76,67 70,67 L38,67 Z"/>
+    <!-- เส้นตั้ง -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M46,30 L54,30 L54,78 L46,78 Z"/>
+    <!-- ขีดบน ฿ -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,30 L66,30 L66,33 L42,33 Z"/>
+</vector>
