@@ -1,0 +1,27 @@
+package com.testnotification.util
+
+import java.text.DecimalFormat
+
+object AmountParser {
+
+    private val fmt = DecimalFormat("#,##0.00")
+
+    private val AMOUNT_REGEX = Regex("""(\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?|\d+(?:\.\d{1,2})?)""")
+
+    private val RECEIVE_KEYWORDS = listOf(
+        "รับโอน", "รับเงิน", "received", "receive",
+        "โอนเข้า", "เข้าบัญชี", "credit", "จำนวนเงิน"
+    )
+
+    fun parse(text: String): Double? {
+        if (text.isBlank()) return null
+        val lower = text.lowercase()
+        if (RECEIVE_KEYWORDS.none { lower.contains(it) }) return null
+        return AMOUNT_REGEX.findAll(text)
+            .mapNotNull { it.value.replace(",", "").toDoubleOrNull() }
+            .filter { it > 0.0 }
+            .maxOrNull()
+    }
+
+    fun format(amount: Double): String = "฿${fmt.format(amount)}"
+}
