@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Payment</string>
+    <string name="service_label">Payment Notification Service</string>
+    <string name="btn_open_settings">Open Notification Access Settings</string>
+
+    <!-- Foreground service notification -->
+    <string name="notification_channel_name">Payment Service</string>
+    <string name="notification_channel_desc">Keeps payment monitoring running in background</string>
+    <string name="foreground_notification_title">Payment Monitor กำลังทำงาน</string>
+    <string name="foreground_notification_text">รอรับการแจ้งเตือนจากธนาคาร</string>
+</resources>
